@@ -1,0 +1,48 @@
+<div ng-controller="projectsCtrl as projectsList" class="tabsdemoStaticTabs">
+  <div class="detailSeparator">
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Project Title</label>
+          <md-icon><i class="material-icons">&#xE8D8;</i></md-icon>
+          <input ng-model="projectsList.title" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Website</label>
+          <md-icon><i class="material-icons">&#xE157;</i></md-icon>
+          <input ng-model="projectsList.website" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Description</label>
+          <md-icon><i class="material-icons">&#xE896;</i></md-icon>
+          <textarea ng-model="projectsList.desc" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+    <input type="hidden" ng-model="projectsList.id">
+    <md-button class="md-raised md-primary" ng-click="projectsList.addProject()" md-colors="{background: 'green'}">Save</md-button>
+    <md-button class="md-raised md-primary" href="#/education" md-colors="{background: 'deep-purple'}">Next ➔</md-button>
+  </div>
+  <md-toolbar class="md-theme-light" md-colors="{background: 'deep-purple'}">
+    <h2 class="md-toolbar-tools">
+      <span>Your Projects</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="project in projectsList.projects">
+        <div class="md-list-item-text">
+          <h3>{{project.title}}</h3>
+          <h4>{{project.website}}</h4>
+          <p>{{project.desc}}</p>
+          <input type="hidden" value="{{project.id}}">
+        </div>
+        <md-button class="md-secondary" ng-click="projectsList.bindSelectedProject(project)" md-colors="{background: 'deep-purple'}">Edit</md-button>
+        <md-button class="md-secondary" ng-click="projectsList.removeProject(project)" md-colors="{background: 'red'}">Remove</md-button>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+      <md-list-item class="md-3-line" ng-show="!projectsList.projects.length">
+        <div class="md-list-item-text">
+          <p>Start adding your Projects!</p>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

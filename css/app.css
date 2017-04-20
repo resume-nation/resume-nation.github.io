@@ -1,0 +1,246 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  background-color: #FFF2E0; }
+
+.tabsdemoStaticTabs{
+    padding: 10px;
+}
+
+.mainApp{
+  height: 100%;
+}
+
+.alignCenter{
+  text-align: center;
+}
+
+.mainHeadline{
+  padding-bottom: 20px;
+  padding-top: 0px;
+  color: #FFFFFF;
+  line-height: 32px !important;
+  font-size: 20px !important;
+  max-width: 595px !important;
+  margin: 0 auto;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.material-cust-medium-button {
+    padding: 10px !important;
+}
+
+.splash-header{
+  background-color: #673AB7;
+}
+
+.feature-icon{
+  font-size: 100px !important;
+}
+
+.functionalityIcons{
+  padding: 40px;
+}
+
+.funcText{
+  font-size: 16px;
+  font-weight: bold;
+  color: #5a5a5a;
+  text-align: center;
+}
+
+.startBtn{
+  padding-bottom: 20px;
+}
+
+.gifSection{
+  background-color: #f1e8ff;
+}
+
+.gifImage{
+  padding: 20px;
+}
+
+.mainToolbar{
+  -webkit-box-shadow: -1px 0px 13px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 13px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 13px -1px rgba(0,0,0,0.75);
+}
+
+.mainTabs{
+  border-bottom: 1px solid #dcd8e4;
+}
+
+.stickyHeader{
+  flex: 0 0 auto;
+}
+
+.stickyContent{
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+footer {
+  background-color: #673AB7;
+}
+
+footer p{
+  color: #ffffff;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+
+footer a{
+  color: #ffffff;
+}
+
+.detailSeparator{
+  padding-bottom: 18px;
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/balls.gif) center no-repeat #fff;
+}
+
+.noContent{
+  left: 0;
+  line-height: 56px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.fabSpeedDialdemoBasicUsage{
+
+  position: absolute;
+
+  right: 2%;
+  float: right;
+  bottom: 2%;
+}
+
+.fabSpeedDialdemoBasicUsage .text-capitalize {
+  text-transform: capitalize;
+}
+
+.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+  background-color: #000 !important;
+}
+
+.fabSpeedDialdemoBasicUsage p.note {
+  font-size: 1.2rem;
+}
+
+.fabSpeedDialdemoBasicUsage .lock-size {
+  min-width: 300px;
+  min-height: 300px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@font-face {
+    font-family: 'propaganda'; /*a name to be used later*/
+    src: url('/fonts/propaganda.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'MysteryQuest'; /*a name to be used later*/
+    src: url('/fonts/MysteryQuest-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'LazenbyCompSmooth'; /*a name to be used later*/
+    src: url('/fonts/LazenbyCompSmooth.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.nameHeader{
+  font-family: 'MysteryQuest';
+  font-size: 36px;
+}
+
+@media print
+{
+    #top_toolbar { display: none; }
+    #top_tabs { display: none; }
+    #downloadHeader {display: none;}
+    .fabSpeedDialdemoBasicUsage {display: none;}
+}

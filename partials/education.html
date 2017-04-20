@@ -1,0 +1,48 @@
+<div ng-controller="educationCtrl as educationList" class="tabsdemoStaticTabs">
+  <div class="detailSeparator">
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>College/University Name</label>
+          <md-icon><i class="material-icons">&#xE84F;</i></md-icon>
+          <input ng-model="educationList.school_name" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Degree Qualification (ex. Bechelor of Science)</label>
+          <md-icon><i class="material-icons">&#xE866;</i></md-icon>
+          <input ng-model="educationList.degree" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Duration (ex. July 2011 - June 2015)</label>
+          <md-icon><i class="material-icons">&#xE916;</i></md-icon>
+          <input ng-model="educationList.duration" required>
+        </md-input-container>
+    <input type="hidden" ng-model="projectsList.id">
+    <md-button class="md-raised md-primary" ng-click="educationList.addEducation()" md-colors="{background: 'green'}">Save</md-button>
+    <md-button class="md-raised md-primary" href="#/skills" md-colors="{background: 'deep-purple'}">Next ➔</md-button>
+  </div>
+  <md-toolbar class="md-theme-light" md-colors="{background: 'deep-purple'}">
+    <h2 class="md-toolbar-tools">
+      <span>Your Projects</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="education in educationList.educations">
+        <div class="md-list-item-text">
+          <h3>{{education.school_name}}</h3>
+          <h4>{{education.degree}}</h4>
+          <p>{{education.duration}}</p>
+          <input type="hidden" value="{{education.id}}">
+        </div>
+        <md-button class="md-secondary" ng-click="educationList.bindSelectedEducation(education)" md-colors="{background: 'deep-purple'}">Edit</md-button>
+        <md-button class="md-secondary" ng-click="educationList.removeEducation(education)" md-colors="{background: 'red'}">Remove</md-button>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+      <md-list-item class="md-3-line" ng-show="!educationList.educations.length">
+        <div class="md-list-item-text">
+          <p>Start adding your Education qualification!</p>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

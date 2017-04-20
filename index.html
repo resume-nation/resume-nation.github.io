@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Resume Nation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#673AB7">
+  <meta name="description" content="A resume generator web app">
+  <meta name="keywords" content="resume,cv,material,angular,app" />
+  <!-- for Facebook -->
+  <meta property="og:title" content="Resume Nation" />
+  <meta property="og:type" content="appliction" />
+  <meta property="og:url" content="https://resume-nation.herokuapp.com" />
+  <meta property="og:description" content="A resume generator web app" />
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Resume Nation" />
+  <meta name="twitter:description" content="A resume generator web app" />
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/resume-one.css">
+  <link rel="stylesheet" href="css/resume-two.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="css/angular-material.min.css">
+  <script>
+    $(window).load(function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("fast");;
+    });
+  </script>
+</head>
+<body>
+  <div class="se-pre-con"></div>
+
+  <div ng-app="resumeApp"
+       ng-controller="tabCtrl as tabCtrl"
+       layout="column" class="mainApp" ng-cloak>
+    <div class="stickyHeader">
+      <md-toolbar md-colors="{background: 'deep-purple'}" id="top_toolbar" class="mainToolbar">
+        <h2 class="md-toolbar-tools" layout-align="center center">
+          <span class="nameHeader"><a href="#/home">Resume Nation</a></span>
+        </h2>
+      </md-toolbar>
+      <md-tabs md-stretch-tabs
+               md-selected="selectedIndex" id="top_tabs" class="mainTabs">
+         <md-tab label="home"></md-tab>
+         <md-tab label="summery"></md-tab>
+         <md-tab label="basic info"></md-tab>
+         <md-tab label="experience"></md-tab>
+         <md-tab label="projects"></md-tab>
+         <md-tab label="education"></md-tab>
+         <md-tab label="skills"></md-tab>
+         <md-tab label="download"></md-tab>
+      </md-tabs>
+    </div>
+    <div class="stickyContent">
+      <div id="content" ui-view flex> </div>
+      <div class="lock-size fabSpeedDialdemoBasicUsage " layout="row" layout-align="center center" ng-cloak>
+        <md-fab-speed-dial md-open="tabCtrl.isOpen" md-direction="{{tabCtrl.selectedDirection}}"
+                           ng-class="tabCtrl.selectedMode">
+          <md-fab-trigger>
+            <md-button aria-label="menu" class="md-fab md-accent">
+              <md-icon class="material-icons">menu</md-icon>
+            </md-button>
+          </md-fab-trigger>
+
+          <md-fab-actions>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+              <md-icon md-svg-src = "/images/svg/facebook-box.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+              <md-icon md-svg-src = "/images/svg/twitter.svg"></md-icon>
+            </md-button>
+          </md-fab-actions>
+        </md-fab-speed-dial>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <!-- Angular Material Library -->
+  <script src="js/angular.js"></script>
+  <script src="js/angular-sanitize.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+  <script src="js/svg-assets-cache.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <script src="js/angular-material.js"></script>
+  <script src="app.js"></script>
+
+  <script src="services/toastService.js"></script>
+  <script src="services/utilService.js"></script>
+
+  <script src="controllers/tabCtrl.js"></script>
+  <script src="controllers/experienceCtrl.js"></script>
+  <script src="controllers/projectsCtrl.js"></script>
+  <script src="controllers/educationCtrl.js"></script>
+  <script src="controllers/skillsCtrl.js"></script>
+  <script src="controllers/downloadCtrl.js"></script>
+
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

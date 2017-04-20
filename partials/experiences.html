@@ -1,0 +1,54 @@
+<div ng-controller="experienceCtrl as experienceList" class="tabsdemoStaticTabs">
+  <div class="detailSeparator">
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Company Name (ex. Amazon)</label>
+          <md-icon><i class="material-icons">&#xE8F8;</i></md-icon>
+          <input ng-model="experienceList.companyname" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Time Period (ex. July 2011 - Feb 2013)</label>
+          <md-icon><i class="material-icons">&#xE916;</i></md-icon>
+          <input ng-model="experienceList.time_period" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Role (ex. Software Engineer)</label>
+          <md-icon><i class="material-icons">&#xE7FD;</i></md-icon>
+          <input ng-model="experienceList.role_company" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Summary of your job responsibilities.</label>
+          <md-icon><i class="material-icons">&#xE896;</i></md-icon>
+          <textarea ng-model="experienceList.desc" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+    <input type="hidden" ng-model="experienceList.id">
+    <md-button class="md-raised md-primary" ng-click="experienceList.addExperience()" md-colors="{background: 'green'}">Save</md-button>
+    <md-button class="md-raised md-primary" href="#/projects" md-colors="{background: 'deep-purple'}">Next ➔</md-button>
+  </div>
+  <md-toolbar class="md-theme-light" md-colors="{background: 'deep-purple'}">
+    <h2 class="md-toolbar-tools">
+      <span>Your Work Experience</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="experience in experienceList.experiences">
+        <div class="md-list-item-text">
+          <h3>{{experience.companyname}}</h3>
+          <h4>{{experience.time_period}}</h4>
+          <p>{{experience.role_company}}</p>
+          <p>Job Summary : {{experience.desc}}</p>
+          <input type="hidden" value="{{experience.id}}">
+        </div>
+        <md-button class="md-secondary" ng-click="experienceList.bindSelectedData(experience)" md-colors="{background: 'deep-purple'}">Edit</md-button>
+        <md-button class="md-secondary" ng-click="experienceList.removeExperience(experience)" md-colors="{background: 'red'}">Remove</md-button>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+      <md-list-item class="md-3-line" ng-show="!experienceList.experiences.length">
+        <div class="md-list-item-text">
+          <p>Start adding your Work experience!</p>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

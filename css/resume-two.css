@@ -1,0 +1,177 @@
+body { margin: 0;
+       padding: 0;
+       background-color: #fff font-size: 12px;
+       font-family: "source-sans-pro", sans-serif;
+       -webkit-font-smoothing: subpixel-antialiased;
+}
+* { box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/*
+ Primary Rules
+*/
+.page h1 { font-weight: 300;
+      font-style:italic;
+     margin: 5px 0 0;
+     font-size: 40px;
+     color:#000000;
+     padding: 0 10px 10px;
+     border-radius:2px;
+     font-family: 'merriweather', sans-serif;
+}
+.page h2 {
+    color: #000000;
+     width: 150px;
+     font-size: 18px;
+     padding-left: 20px;
+     font-weight:400;
+     font-family: 'merriweather', sans-serif;
+}
+.page h2:first-letter { font-size: 150%; }
+.page h3 { font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 0;
+     line-height: 28px;
+     font-family: 'merriweather', sans-serif;
+}
+.page h2, h3 { margin-top: 5px }
+.page a { color: #ba0018;
+    display: inline-block;
+    text-decoration: none;
+    padding:2px 4px;
+    border-radius:2px;
+    margin-right:-2px;
+}
+.page a:hover {
+  background-color:#ba0018;
+  color:#fff;
+}
+.page .key:first-child { margin-left: 0 }
+.page .key { margin: 0 10px;
+       position: relative;
+}
+.page .key::before { content: '◆';
+               position: absolute;
+               left: -15px;
+               color: #555;
+               font-size: 7pt;
+}
+.page .key:first-child::before { content: '' }
+.page .section { border-bottom: 1px solid #ddd;
+           padding: 10px 0 15px;
+}
+.page .section:last-child { border: none }
+.page .section-text { width: 80%;
+                font-size: 18px;
+                line-height: 24px;
+                margin: 10px 0 10px;
+                padding: 0 10px;
+}
+.page .subsection { margin: 10px 0 5px }
+.page .desc { font-size: 16px; font-family: "source-sans-pro", sans-serif; color:#444;}
+.page .contact-info { font-size: 16px;
+                text-align: right;
+}
+.page .emph { font-style: italic }
+.page .light { color: #aaa;letter-spacing:1px;
+         font-size: 14px;
+         line-height:28px;
+         font-family: "source-sans-pro", sans-serif;
+         text-transform:uppercase;
+}
+.page ul{
+  padding-left:15px;
+}
+
+.page ul.skills{
+  float:left;
+  width:30%;
+  padding-left:0px;
+  margin: 0 20px 0 0;
+}
+
+.page ul.skills li{
+  list-style: none;
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.page ul.skills li:last-child{
+  margin:0;
+}
+
+/*
+ Float Rules
+*/
+.page .row:before, .row:after { content: "";
+                          display: table;
+}
+.page .row:after { clear: both }
+.page .col { float: left }
+.page .col-right { float: right }
+
+/*
+ Page Rules
+*/
+.page { width: 1000px;
+        min-height: 29.7cm;
+        margin: 1cm auto;
+
+        background: white;
+        padding: 20px 50px;
+}
+.page .subpage { padding: 1cm;
+           border: 1px red solid;
+           height: 297mm;
+}
+
+@page { size: A4;
+        margin: 0;
+}
+
+@media print {
+    .page { margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+    }
+    .page .page-break{
+      page-break-before: always;
+      padding-top:30px;
+    }
+
+    .page body { font-size: 12pt;}
+    .page h1{
+      font-size: 23pt;
+    }
+
+    .page h2{
+      font-size:10pt;
+      width: 3cm;
+      padding-left: 10px;
+    }
+
+    .page h3 { font-size: 10pt; line-height:11pt}
+
+    .page .section-text { font-size: 9pt; line-height: 14pt; }
+
+    .page .light { font-size: 7.5pt; line-height:12pt; color:#ddd; }
+
+    .page { width: 21cm }
+    .page ul {margin:5px 0 0}
+    .page.section { padding: 5px 0 8px }
+    .page .section-text { width: 15cm; margin: 5px 0 5px;}
+    .page .subsection { margin: 5px 0 0 }
+    .page .desc { font-size: 9pt }
+
+    .page .contact-info { font-size: 9pt}
+
+    .page ul.skills{margin: 0 10px 0 0;}
+    .page ul.skills li{ font-size: 9pt; margin-bottom:0}
+
+}
