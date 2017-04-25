@@ -105,6 +105,6 @@ resumeApp.controller('tabCtrl', function($scope, toastService, utilService, $loc
     this.bottomDirections = 'down';
 
     this.isOpen = false;
-    this.selectedMode = 'md-fling';
+    this.selectedMode = 'md-scale';
     this.selectedDirection = 'up';
 })

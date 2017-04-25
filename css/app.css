@@ -242,5 +242,6 @@ footer a{
     #top_toolbar { display: none; }
     #top_tabs { display: none; }
     #downloadHeader {display: none;}
-    .fabSpeedDialdemoBasicUsage {display: none;}
+    .fabSpeedDialdemoBasicUsage {display: none !important;}
+    html, body { overflow: hidden; }
 }
