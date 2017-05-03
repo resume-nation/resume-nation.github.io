@@ -1,6 +1,6 @@
 <div ng-controller="downloadCtrl as downloadList">
   <div layout-align="center center" layout="row" id="downloadHeader" ng-show="downloadList.noContent<6">
-    <span><md-button class="md-raised md-primary" onclick="window.print();" md-colors="{background: 'deep-purple'}" id="btnDownload">Download Resume</md-button></span>
+    <span><md-button class="md-raised md-primary" ng-click="printThis(resumeSelection)" md-colors="{background: 'deep-purple'}" id="btnDownload">Download Resume</md-button></span>
     <span>
       <md-radio-group ng-model="resumeSelection" layout="row">
         <md-radio-button value="Resume1">Flat</md-radio-button>

@@ -73,6 +73,14 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
   }else{
     i++;
   }
-console.log(i);
+
   downloadList.noContent = i;
+
+  $scope.printThis = function(resumeSelection) {
+      if(resumeSelection=='Resume1'){
+        $('#resume_1').printThis();
+      }else{
+        $('#resume_2').printThis();
+      }
+    };
 });
