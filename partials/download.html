@@ -7,7 +7,12 @@
         <md-radio-button value="Resume2"> Fancy </md-radio-button>
       </md-radio-group>
     </span>
-
+  </div>
+  <div layout-align="center center" layout="row">
+    <md-slider-container>
+      <span>Line spacing</span>
+      <md-slider flex min="0" max="150" ng-model="color.red" aria-label="red" id="red-slider"></md-slider>
+    </md-slider-container>
   </div>
   <div id="resume_1" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume1'">
 
