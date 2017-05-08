@@ -244,4 +244,7 @@ footer a{
     #downloadHeader {display: none;}
     .fabSpeedDialdemoBasicUsage {display: none !important;}
     .noContent{display:none;}
+    .ng-hide {
+       display: none !important;
+     }
 }

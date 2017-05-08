@@ -83,4 +83,10 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
         $('#resume_2').printThis();
       }
     };
+
+  $scope.changeLinespacing = function() {
+    let linespacing = $scope.linespacing;
+    $('#resume_1').css('line-height', linespacing+'px');
+    $('#resume_2').css('line-height', linespacing+'px');
+  }
 });
