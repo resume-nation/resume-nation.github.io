@@ -114,7 +114,7 @@ body { margin: 0;
 /*
  Page Rules
 */
-.page { width: 1000px;
+.page { width: 100%;
         min-height: 29.7cm;
         margin: 1cm auto;
 

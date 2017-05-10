@@ -2,10 +2,18 @@
   <div layout-align="center center" layout="row" id="downloadHeader" ng-show="downloadList.noContent<6">
     <span><md-button class="md-raised md-primary" ng-click="printThis(resumeSelection)" md-colors="{background: 'deep-purple'}" id="btnDownload">Download Resume</md-button></span>
     <span>
-      <md-radio-group ng-model="resumeSelection" layout="row">
+      <!--<md-radio-group ng-model="resumeSelection" layout="row">
         <md-radio-button value="Resume1">Flat</md-radio-button>
         <md-radio-button value="Resume2"> Fancy </md-radio-button>
-      </md-radio-group>
+      </md-radio-group>-->
+      <md-select ng-model="resumeSelection">
+        <md-option value="Resume1" selected>
+          <em>Flat</em>
+        </md-option>
+        <md-option value="Resume2">
+          <em>Fancy</em>
+        </md-option>
+      </md-select>
     </span>
   </div>
   <div layout-align="center center" layout="row">
@@ -14,7 +22,7 @@
       <md-slider flex min="0" max="150" ng-model="linespacing" aria-label="red" id="linespacing-slider" ng-change="changeLinespacing()"></md-slider>
     </md-slider-container>
   </div>
-  <div id="resume_1" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume1'">
+  <div id="resume_1" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume1'" layout-align="center center">
 
     <div id="cv1" class="instaFade centerResume">
       <div class="mainDetails" ng-show="downloadList.fullname">

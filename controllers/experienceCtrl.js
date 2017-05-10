@@ -2,6 +2,7 @@ resumeApp.controller('experienceCtrl', function($scope, toastService, utilServic
   var experienceList = this;
   experienceList.experiences = [];
 
+  experienceList.btnSaveExperience = "Add";
   if(JSON.parse(localStorage.getItem('addExperienceObject'))){
     var resolveAddExperienceObject = JSON.parse(localStorage.getItem('addExperienceObject'));
     for(var i = 0; i < resolveAddExperienceObject.length; i++) {
@@ -58,7 +59,8 @@ resumeApp.controller('experienceCtrl', function($scope, toastService, utilServic
     experienceList.role_company = '';
     experienceList.desc = '';
     experienceList.id = '';
-
+    experienceList.btnSaveExperience = "Add";
+    
     toastService.showSimpleToast();
   }
 
@@ -75,6 +77,7 @@ resumeApp.controller('experienceCtrl', function($scope, toastService, utilServic
   }
 
   experienceList.bindSelectedData = function(experience) {
+    experienceList.btnSaveExperience = "Save";
     experienceList.companyname = experience.companyname;
     experienceList.time_period = experience.time_period;
     experienceList.role_company = experience.role_company;

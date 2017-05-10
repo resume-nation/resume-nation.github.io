@@ -158,83 +158,9 @@ section:last-child {
 	margin: 0px auto;
 }
 
-@media all and (min-width: 602px) and (max-width: 800px) {
-	#headshot {
-		display: none;
-	}
-
-	.keySkills {
-	-moz-column-count:2;
-	-webkit-column-count:2;
-	column-count:2;
-	}
-}
-
-@media all and (max-width: 601px) {
-	#cv {
-		width: 95%;
-		margin: 10px auto;
-		min-width: 280px;
-	}
-
-	#headshot {
-		display: none;
-	}
-
-	#name, #contactDetails {
-		float: none;
-		width: 100%;
-		text-align: center;
-	}
-
-	.sectionTitle, .sectionContent {
-		float: none;
-		width: 100%;
-	}
-
-	.sectionTitle {
-		margin-left: -2px;
-		font-size: 1.25em;
-	}
-
-	.keySkills {
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2;
-	}
-}
-
-@media all and (max-width: 480px) {
-	.mainDetails {
-		padding: 15px 15px;
-	}
-
-	section {
-		padding: 15px 0 0;
-	}
-
-	#mainArea {
-		padding: 0 25px;
-	}
 
 
-	.keySkills {
-	-moz-column-count:1;
-	-webkit-column-count:1;
-	column-count:1;
-	}
 
-	#name h1 {
-		line-height: .8em;
-		margin-bottom: 4px;
-	}
-}
-
-@media print {
-    #cv {
-        width: 100%;
-    }
-}
 
 @-webkit-keyframes reset {
 	0% {

@@ -16,7 +16,7 @@
           <input ng-model="educationList.duration" required>
         </md-input-container>
     <input type="hidden" ng-model="projectsList.id">
-    <md-button class="md-raised md-primary" ng-click="educationList.addEducation()" md-colors="{background: 'green'}">Add</md-button>
+    <md-button class="md-raised md-primary" ng-click="educationList.addEducation()" md-colors="{background: 'green'}" ng-bind="educationList.btnSaveEducation">Add</md-button>
     <md-button class="md-raised md-primary" href="#/skills" md-colors="{background: 'deep-purple'}">Next ➔</md-button>
   </div>
   <md-toolbar class="md-theme-light" md-colors="{background: 'deep-purple'}">

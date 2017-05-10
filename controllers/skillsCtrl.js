@@ -2,6 +2,7 @@ resumeApp.controller('skillsCtrl', function($scope, toastService, utilService, $
   var skillsList = this;
   skillsList.skills = [];
 
+  skillsList.btnSaveSkills = "Add";
   if(JSON.parse(localStorage.getItem('addSkillsObject'))){
     var resolveAddSkillsObject = JSON.parse(localStorage.getItem('addSkillsObject'));
     for(var i = 0; i < resolveAddSkillsObject.length; i++) {
@@ -46,6 +47,7 @@ resumeApp.controller('skillsCtrl', function($scope, toastService, utilService, $
     }
     skillsList.name = '';
     skillsList.id = '';
+    skillsList.btnSaveSkills = "Add";
 
     toastService.showSimpleToast();
   }
@@ -63,6 +65,7 @@ resumeApp.controller('skillsCtrl', function($scope, toastService, utilService, $
   }
 
   skillsList.bindSelectedSkill = function(skill) {
+    skillsList.btnSaveSkills = "Save";
     skillsList.name = skill.name;
     skillsList.id = skill.id;
   }

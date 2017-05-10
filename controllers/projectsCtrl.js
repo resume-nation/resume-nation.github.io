@@ -2,6 +2,7 @@ resumeApp.controller('projectsCtrl', function($scope, toastService, utilService,
   var projectsList = this;
   projectsList.projects = [];
 
+  projectsList.btnSaveProjects = "Add";
   if(JSON.parse(localStorage.getItem('addProjectObject'))){
     var resolveAddProjectObject = JSON.parse(localStorage.getItem('addProjectObject'));
     for(var i = 0; i < resolveAddProjectObject.length; i++) {
@@ -53,6 +54,7 @@ resumeApp.controller('projectsCtrl', function($scope, toastService, utilService,
     projectsList.website = '';
     projectsList.desc = '';
     projectsList.id = '';
+    projectsList.btnSaveProjects = "Add";
 
     toastService.showSimpleToast();
   }
@@ -70,6 +72,7 @@ resumeApp.controller('projectsCtrl', function($scope, toastService, utilService,
   }
 
   projectsList.bindSelectedProject = function(project) {
+    projectsList.btnSaveProjects = "Save";
     projectsList.title = project.title;
     projectsList.website = project.website;
     projectsList.desc = project.desc;

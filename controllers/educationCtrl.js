@@ -2,6 +2,7 @@ resumeApp.controller('educationCtrl', function($scope, toastService, utilService
   var educationList = this;
   educationList.educations = [];
 
+  educationList.btnSaveEducation = "Add";
   if(JSON.parse(localStorage.getItem('addEducationObject'))){
     var resolveAddEducationObject = JSON.parse(localStorage.getItem('addEducationObject'));
     for(var i = 0; i < resolveAddEducationObject.length; i++) {
@@ -54,6 +55,7 @@ resumeApp.controller('educationCtrl', function($scope, toastService, utilService
     educationList.degree = '';
     educationList.duration = '';
     educationList.id = '';
+    educationList.btnSaveEducation = "Add";
 
     toastService.showSimpleToast();
   }
@@ -71,6 +73,7 @@ resumeApp.controller('educationCtrl', function($scope, toastService, utilService
   }
 
   educationList.bindSelectedEducation = function(education) {
+    educationList.btnSaveEducation = "Save";
     educationList.school_name = education.school_name;
     educationList.degree = education.degree;
     educationList.duration = education.duration;
