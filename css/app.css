@@ -238,45 +238,89 @@ footer a{
 }
 
 @media (max-width: 7.6in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+  #resume_1 {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
     position: relative;
+    margin-left: -0.9in;
+    margin-top: -0.9in;
+  }
+  #resume_2 {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    position: relative;
+    margin-left: -0.9in;
+    margin-top: -1.9in;
   }
 }
 @media (max-width: 6.9in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-
+  #resume_1 {
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      margin-left: -1.069in;
+      margin-top: -1.0in;
+  }
+  #resume_2 {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      margin-left: -1.069in;
+      margin-top: -2.4in;
   }
 }
 @media (max-width: 6.1in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
-
+  #resume_1 {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      margin-left: -1.469in;
+      margin-top: -1.4in;
+  }
+  #resume_2 {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      margin-left: -1.169in;
+      margin-top: -3in;
   }
 }
 @media (max-width: 5.4in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.6);
-    transform: scale(0.6);
-
+  #resume_1 {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      margin-left: -1.469in;
+      margin-top: -1.6in;
+  }
+  #resume_2 {
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      margin-left: -1.269in;
+      margin-top: -3.3in;
   }
 }
 @media (max-width: 4.6in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-
+  #resume_1 {
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      margin-left: -1.485in;
+      margin-top: -2.1in;
+  }
+  #resume_2 {
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      margin-left: -1.585in;
+      margin-top: -3.9in;
   }
 }
 @media (max-width: 3.8in) {
-  #resume_1, #resume_2 {
-    -webkit-transform: scale(0.4);
-    transform: scale(0.4);
-
+  #resume_1 {
+      -webkit-transform: scale(0.3);
+      transform: scale(0.3);
+      margin-left: -1.35in;
+      margin-top: -2.7in;
+  }
+  #resume_2 {
+      -webkit-transform: scale(0.3);
+      transform: scale(0.3);
+      margin-left: -1.369in;
+      margin-top: -4in;
   }
 }
 @media (max-width: 3in) {
