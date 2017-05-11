@@ -295,6 +295,7 @@ footer a{
       margin-top: -3.3in;
   }
 }
+
 @media (max-width: 4.6in) {
   #resume_1 {
       -webkit-transform: scale(0.4);
@@ -311,10 +312,10 @@ footer a{
 }
 @media (max-width: 3.8in) {
   #resume_1 {
-      -webkit-transform: scale(0.3);
-      transform: scale(0.3);
-      margin-left: -1.35in;
-      margin-top: -2.7in;
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      margin-left: -1.55in;
+      margin-top: -0.4in;
   }
   #resume_2 {
       -webkit-transform: scale(0.3);
