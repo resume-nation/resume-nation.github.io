@@ -20,12 +20,18 @@ resumeApp.service('toastService', function ($mdToast) {
   this.showSimpleToast = function() {
     var pinTo = this.getToastPosition();
 
-    $mdToast.show(
+    /*$mdToast.show(
       $mdToast.simple()
         .textContent('Saved.')
         .position(pinTo )
         .hideDelay(3000)
-    );
+    );*/
+
+    $mdToast.show({
+          hideDelay   : 2000,
+          position    : 'top right',
+          templateUrl : 'partials/toast-template.html'
+        });
   };
 
   function sanitizePosition() {

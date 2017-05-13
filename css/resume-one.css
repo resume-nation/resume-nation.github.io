@@ -27,10 +27,15 @@ p {
 	margin: 30px auto;
 }
 
+#cv1{
+	border: 1px solid #a0a0a0;
+	min-height: 29.7cm;
+	background: white;
+}
+
 .mainDetails {
 	padding: 25px 35px;
 	border-bottom: 2px solid #000000;
-	background: #ededed;
 }
 
 #name h1 {

@@ -237,13 +237,18 @@ footer a{
   font-size: 36px;
 }
 
+.paddingRight{
+  padding-right: 10px;
+  color: #737272;
+}
+
 @media (max-width: 7.6in) {
   #resume_1 {
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
     position: relative;
     margin-left: -0.9in;
-    margin-top: -0.9in;
+    margin-top: -0.1in;
   }
   #resume_2 {
     -webkit-transform: scale(0.7);
@@ -257,8 +262,8 @@ footer a{
   #resume_1 {
       -webkit-transform: scale(0.7);
       transform: scale(0.7);
-      margin-left: -1.069in;
-      margin-top: -1.0in;
+      margin-left: -1.369in;
+      margin-top: 0in;
   }
   #resume_2 {
       -webkit-transform: scale(0.6);
@@ -271,8 +276,8 @@ footer a{
   #resume_1 {
       -webkit-transform: scale(0.6);
       transform: scale(0.6);
-      margin-left: -1.469in;
-      margin-top: -1.4in;
+      margin-left: -1.269in;
+      margin-top: -0.2in;
   }
   #resume_2 {
       -webkit-transform: scale(0.5);
@@ -285,8 +290,8 @@ footer a{
   #resume_1 {
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
-      margin-left: -1.469in;
-      margin-top: -1.6in;
+      margin-left: -1.329in;
+      margin-top: -0.3in;
   }
   #resume_2 {
       -webkit-transform: scale(0.4);
@@ -301,7 +306,7 @@ footer a{
       -webkit-transform: scale(0.4);
       transform: scale(0.4);
       margin-left: -1.485in;
-      margin-top: -2.1in;
+      margin-top: -0.4in;
   }
   #resume_2 {
       -webkit-transform: scale(0.4);
@@ -314,7 +319,7 @@ footer a{
   #resume_1 {
       -webkit-transform: scale(0.4);
       transform: scale(0.4);
-      margin-left: -1.55in;
+      margin-left: -1.65in;
       margin-top: -0.4in;
   }
   #resume_2 {
@@ -353,5 +358,13 @@ footer a{
       margin-left: 0;
       margin-top: 0 !important;
       margin-bottom: 0;
+    }
+
+    #cv1{
+    	border:none !important;
+    }
+
+    .page{
+    	border:none !important;
     }
 }

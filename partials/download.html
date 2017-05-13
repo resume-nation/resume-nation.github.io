@@ -16,9 +16,9 @@
       </md-select>
     </span>
   </div>
-  <div layout-align="center center" layout="row">
+  <div layout-align="center center" layout="row" ng-show="downloadList.noContent<6">
+    <span class="paddingRight">Line spacing</span>
     <md-slider-container>
-      <span>Line spacing</span>
       <md-slider flex min="0" max="150" ng-model="linespacing" aria-label="red" id="linespacing-slider" ng-change="changeLinespacing()"></md-slider>
     </md-slider-container>
   </div>
@@ -116,21 +116,16 @@
 
       </div>
       </div>
-      <div layout="column" layout-align="center center" ng-show="downloadList.noContent==6">
-        <div class="noContent">
-          <p>Please add some information of yours and check back later.</p>
-          <md-button href="#/summary" class="md-raised md-primary material-cust-medium-button" md-colors="{background: 'green'}">🠜 Start building your Resume</md-button>
-        </div>
-      </div>
+
   </div>
   <div id='resume_2' ng-show="resumeSelection == 'Resume2'">
     <div class="page">
             <div class="section row" ng-show="downloadList.fullname">
                 <h1 class="col"><span style="font-weight:700">{{downloadList.fullname}}</span></h1>
                 <div class="contact-info col-right">
-                    <div>{{downloadList.phonenumber}}</div>
-                    <div>{{downloadList.email}}</div>
-                    <div>{{downloadList.website}}</div>
+                    <div><span class="paddingRight"><strong><i class="material-icons md-body-2">phone</i></strong></span><span>{{downloadList.phonenumber}}</span></div>
+                    <div><span class="paddingRight"><i class="material-icons md-body-2">email</i></span><span>{{downloadList.email}}</span></div>
+                    <div><span class="paddingRight"><i class="material-icons md-body-2">mouse</i></span><span>{{downloadList.website}}</span></div>
                 </div>
             </div>
             <div class="section row" ng-show="downloadList.summary">
@@ -193,11 +188,12 @@
                 </div>
             </div>
         </div>
-        <div layout="column" layout-align="center center" ng-show="downloadList.noContent==6">
-          <div class="noContent">
-            <p>Please add some information of yours and check back later.</p>
-            <md-button href="#/summary" class="md-raised md-primary material-cust-medium-button" md-colors="{background: 'green'}">🠄 Start building your Resume</md-button>
-          </div>
-        </div>
+
+  </div>
+  <div layout="row" layout-align="center center" ng-show="downloadList.noContent==6">
+    <div class="noContent">
+      <p>Please add some information of yours and check back later.</p>
+      <md-button href="#/summary" class="md-raised md-primary material-cust-medium-button" md-colors="{background: 'green'}">🠄 Start building your Resume</md-button>
+    </div>
   </div>
 </div>
