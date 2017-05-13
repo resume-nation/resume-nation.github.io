@@ -79,8 +79,10 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
   $scope.printThis = function(resumeSelection) {
       if(resumeSelection=='Resume1'){
         $('#resume_1').printThis();
-      }else{
+      }else if(resumeSelection=='Resume2'){
         $('#resume_2').printThis();
+      }else if(resumeSelection=='Resume3'){
+        $('#resume_3').printThis();
       }
     };
 
@@ -88,7 +90,6 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
   $scope.changeLinespacing = function() {
     //console.log($scope.linespacing);
     let linespacing = $scope.linespacing/20;
-    $('#cv1').css('line-height', linespacing+'em');
-    $('.page').css('line-height', linespacing+'em');
+    $('.cv1').css('line-height', linespacing+'em');
   }
 });

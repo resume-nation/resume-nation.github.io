@@ -27,7 +27,7 @@ p {
 	margin: 30px auto;
 }
 
-#cv1{
+.cv1{
 	border: 1px solid #a0a0a0;
 	min-height: 29.7cm;
 	background: white;
@@ -163,9 +163,141 @@ section:last-child {
 	margin: 0px auto;
 }
 
+/* Resume 3 */
 
+#name_r3 h1 {
+	font-size: 2.5em;
+	font-weight: 700;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	margin-bottom: -6px;
+	font-style: italic;
+}
 
+#name_r3 h2 {
+	font-size: 2em;
+	margin-left: 2px;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+}
 
+#contactDetails_r3 ul {
+	list-style-type: none;
+	font-size: 0.9em;
+	margin-top: 2px;
+}
+
+#contactDetails_r3 ul li {
+	margin-bottom: 3px;
+	color: #444;
+}
+
+#contactDetails_r3 ul li a, a[href^=tel] {
+	color: #444;
+	text-decoration: none;
+	-webkit-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	-ms-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+}
+
+#contactDetails_r3 ul li a:hover {
+	color: #cf8a05;
+}
+
+.mainDetails_r3 {
+	padding: 25px 35px;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+
+.sectionTitle_r3 {
+	float: left;
+	width: 25%;
+}
+
+.sectionTitle_r3 h1 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+  color: #000000;
+  line-height: 15px;
+}
+
+.sectionTitle_r3 h1:first-letter {
+	font-size: 150%;
+}
+
+/*resume2*/
+.mainDetails_r2 {
+	padding: 25px 35px;
+	text-align: center;
+}
+
+#name_r3 h2 {
+	font-size: 2em;
+	margin-left: 2px;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+}
+
+#name_r2 h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    margin-bottom: -6px;
+    /* font-style: italic; */
+    letter-spacing: 14px;
+    word-spacing: 7.23in;
+    text-transform: uppercase;
+}
+
+.pdf-header:before {
+    content: "\00a0";
+    border-top: 1px solid #313544;
+    position: relative;
+    top: 12px;
+    display: table-cell;
+}
+
+.pdf-header:after {
+    content: "\00a0";
+    height: 0;
+    border-top: 1px solid #313544;
+    position: relative;
+    top: 12px;
+    display: table-cell;
+}
+
+.sectionTitle_r2{
+	font-family: 'Raleway', sans-serif;
+    font-size: 14pt;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    display: table;
+    padding: 0;
+}
+
+.sectionTitle_r2 h1 {
+    width: 1px;
+    white-space: nowrap;
+    display: table-cell;
+    box-sizing: border-box;
+    padding: 0 15px 0 19px;
+    font-style: normal;
+    text-align: center;
+}
+
+#resume_2 section {
+	padding: 20px 0 0;
+	border-top: none;
+	padding: 0;
+}
+
+#resume_2 .sectionContent {
+    float: left;
+    width: 72.5%;
+}
 
 @-webkit-keyframes reset {
 	0% {

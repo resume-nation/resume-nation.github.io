@@ -243,90 +243,90 @@ footer a{
 }
 
 @media (max-width: 7.6in) {
-  #resume_1 {
+  #resume_1, #resume_2 {
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
     position: relative;
-    margin-left: -0.9in;
-    margin-top: -0.1in;
+    margin-left: -1.0in;
+    margin-top: -1.5in;
   }
-  #resume_2 {
+  #resume_3 {
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
     position: relative;
-    margin-left: -0.9in;
-    margin-top: -1.9in;
+    margin-left: -1.0in;
+    margin-top: -1.5in;
   }
 }
 @media (max-width: 6.9in) {
-  #resume_1 {
-      -webkit-transform: scale(0.7);
-      transform: scale(0.7);
-      margin-left: -1.369in;
-      margin-top: 0in;
-  }
-  #resume_2 {
+  #resume_1, #resume_2 {
       -webkit-transform: scale(0.6);
       transform: scale(0.6);
-      margin-left: -1.069in;
-      margin-top: -2.4in;
+      margin-left: -1.169in;
+      margin-top: -2.1in;
+  }
+  #resume_3 {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      margin-left: -1.169in;
+      margin-top: -2.1in;
   }
 }
 @media (max-width: 6.1in) {
-  #resume_1 {
-      -webkit-transform: scale(0.6);
-      transform: scale(0.6);
-      margin-left: -1.269in;
-      margin-top: -0.2in;
-  }
-  #resume_2 {
+  #resume_1, #resume_2 {
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
-      margin-left: -1.169in;
-      margin-top: -3in;
+      margin-left: -1.269in;
+      margin-top: -2.7in;
+  }
+  #resume_3 {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      margin-left: -1.269in;
+      margin-top: -2.7in;
   }
 }
 @media (max-width: 5.4in) {
-  #resume_1 {
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
-      margin-left: -1.329in;
-      margin-top: -0.3in;
-  }
-  #resume_2 {
+  #resume_1, #resume_2 {
       -webkit-transform: scale(0.4);
       transform: scale(0.4);
-      margin-left: -1.269in;
+      margin-left: -1.329in;
+      margin-top: -3.3in;
+  }
+  #resume_3 {
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      margin-left: -1.329in;
       margin-top: -3.3in;
   }
 }
 
 @media (max-width: 4.6in) {
-  #resume_1 {
-      -webkit-transform: scale(0.4);
-      transform: scale(0.4);
+  #resume_1, #resume_2 {
+      -webkit-transform: scale(0.35);
+      transform: scale(0.35);
       margin-left: -1.485in;
-      margin-top: -0.4in;
+      margin-top: -3.6in;
   }
-  #resume_2 {
-      -webkit-transform: scale(0.4);
-      transform: scale(0.4);
-      margin-left: -1.585in;
-      margin-top: -3.9in;
+  #resume_3 {
+      -webkit-transform: scale(0.35);
+      transform: scale(0.35);
+      margin-left: -1.485in;
+      margin-top: -3.6in;
   }
 }
 @media (max-width: 3.8in) {
-  #resume_1 {
-      -webkit-transform: scale(0.4);
-      transform: scale(0.4);
-      margin-left: -1.65in;
-      margin-top: -0.4in;
-  }
-  #resume_2 {
+  #resume_1, #resume_2 {
       -webkit-transform: scale(0.3);
       transform: scale(0.3);
-      margin-left: -1.369in;
-      margin-top: -4in;
+      margin-left: -1.25in;
+      margin-top: -4.0in;
+  }
+  #resume_3 {
+      -webkit-transform: scale(0.3);
+      transform: scale(0.3);
+      margin-left: -1.25in;
+      margin-top: -4.0in;
   }
 }
 @media (max-width: 3in) {
@@ -348,7 +348,7 @@ footer a{
        display: none !important;
      }
 
-     #resume_1, #resume_2 {
+     #resume_1, #resume_2, #resume_3 {
       -webkit-transform: scale(1);
       transform: scale(1);
       width: 100%;
@@ -360,7 +360,7 @@ footer a{
       margin-bottom: 0;
     }
 
-    #cv1{
+    .cv1{
     	border:none !important;
     }
 
