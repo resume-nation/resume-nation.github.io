@@ -242,6 +242,10 @@ footer a{
   color: #737272;
 }
 
+.md-20 {
+  font-size: 20px;
+}
+
 @media (max-width: 7.6in) {
   #resume_1, #resume_2 {
     -webkit-transform: scale(0.7);

@@ -24,7 +24,6 @@
 
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/resume-one.css">
-  <link rel="stylesheet" href="css/resume-two.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/printThis.js"></script>
   <link rel="stylesheet" href="css/angular-material.min.css">
@@ -49,14 +48,54 @@
       </md-toolbar>
       <md-tabs md-stretch-tabs
                md-selected="selectedIndex" id="top_tabs" class="mainTabs">
-         <md-tab label="home"></md-tab>
-         <md-tab label="summery"></md-tab>
-         <md-tab label="basic info"></md-tab>
-         <md-tab label="experience"></md-tab>
-         <md-tab label="projects"></md-tab>
-         <md-tab label="education"></md-tab>
-         <md-tab label="skills"></md-tab>
-         <md-tab label="download"></md-tab>
+         <md-tab label="home">
+           <md-tab-label>
+             <md-icon><i class="material-icons">home</i></md-icon>
+             Home
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="summery">
+           <md-tab-label>
+             <md-icon><i class="material-icons">list</i></md-icon>
+             Summary
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="basic info">
+           <md-tab-label>
+             <md-icon><i class="material-icons">account_circle</i></md-icon>
+             Personal Info
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="experience">
+           <md-tab-label>
+             <md-icon><i class="material-icons">work</i></md-icon>
+             Experience
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="projects">
+           <md-tab-label>
+             <md-icon><i class="material-icons">web</i></md-icon>
+             Projects
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="education">
+           <md-tab-label>
+             <md-icon><i class="material-icons">account_balance</i></md-icon>
+             Education
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="skills">
+           <md-tab-label>
+             <md-icon><i class="material-icons">build</i></md-icon>
+             Skils
+           </md-tab-label>
+         </md-tab>
+         <md-tab label="download">
+           <md-tab-label>
+             <md-icon><i class="material-icons">file_download</i></md-icon>
+             Download
+           </md-tab-label>
+         </md-tab>
       </md-tabs>
     </div>
     <div class="stickyContent">
@@ -71,11 +110,26 @@
           </md-fab-trigger>
 
           <md-fab-actions>
-            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-              <md-icon md-svg-src = "/images/svg/facebook-box.svg"></md-icon>
+            <md-button aria-label="Summary" class="md-fab md-raised md-mini" href="#/summary">
+              <md-icon><i class="material-icons">list</i></md-icon>
             </md-button>
-            <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-              <md-icon md-svg-src = "/images/svg/twitter.svg"></md-icon>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/basicinfo">
+              <md-icon><i class="material-icons">account_circle</i></md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/experiences">
+              <md-icon><i class="material-icons">work</i></md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/projects">
+              <md-icon><i class="material-icons">web</i></md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/education">
+              <md-icon><i class="material-icons">account_balance</i></md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/skills">
+              <md-icon><i class="material-icons">build</i></md-icon>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="#/download">
+              <md-icon><i class="material-icons">file_download</i></md-icon>
             </md-button>
           </md-fab-actions>
         </md-fab-speed-dial>
@@ -109,8 +163,5 @@
   <script src="controllers/skillsCtrl.js"></script>
   <script src="controllers/downloadCtrl.js"></script>
 
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>
