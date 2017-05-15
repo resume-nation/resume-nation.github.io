@@ -25,7 +25,7 @@
       <md-slider flex min="0" max="150" ng-model="linespacing" aria-label="red" id="linespacing-slider" ng-change="changeLinespacing()"></md-slider>
     </md-slider-container>
   </div>
-  <div id="resume_1" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume1'">
+  <div id="resume_1" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume1' && downloadList.noContent<6">
 
     <div class="instaFade centerResume cv1">
       <div class="mainDetails" ng-show="downloadList.fullname">
@@ -121,7 +121,7 @@
       </div>
 
   </div>
-  <div id="resume_2" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume2'">
+  <div id="resume_2" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume2' && downloadList.noContent<6">
 
     <div class="instaFade centerResume cv1">
       <div class="mainDetails_r2" ng-show="downloadList.fullname">
@@ -218,7 +218,7 @@
       </div>
 
   </div>
-  <div id="resume_3" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume3'">
+  <div id="resume_3" class="ng-scope theme-pacifico" ng-show="resumeSelection == 'Resume3' && downloadList.noContent<6">
 
     <div class="instaFade centerResume cv1">
       <div class="mainDetails_r3" ng-show="downloadList.fullname">
