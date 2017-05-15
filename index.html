@@ -27,6 +27,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/printThis.js"></script>
   <link rel="stylesheet" href="css/angular-material.min.css">
+  <link rel="manifest" href="manifest.json">
   <script>
     $(window).load(function() {
       // Animate loader off screen
@@ -162,6 +163,17 @@
   <script src="controllers/educationCtrl.js"></script>
   <script src="controllers/skillsCtrl.js"></script>
   <script src="controllers/downloadCtrl.js"></script>
-
+  <script type="text/javascript">
+    // Registering ServiceWorker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+      }).catch(function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
 </body>
 </html>
