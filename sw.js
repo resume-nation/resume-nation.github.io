@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-var CACHE_VERSION = 'resumenation-v6';
+var CACHE_VERSION = 'resumenation-v8';
 var CACHE_FILES = [
     '/',
     'index.html',
@@ -58,7 +58,10 @@ var CACHE_FILES = [
     'images/icon-96.png',
     'images/icon-144.png',
     'images/icon-192.png',
-    'images/spiffygif_36x36.gif'
+    'images/spiffygif_36x36.gif',
+    'images/flat-demo.PNG',
+    'images/fancy-demo.PNG',
+    'images/stock-demo.PNG'
 ];
 
 self.addEventListener('install', function (event) {
@@ -72,14 +75,17 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request).then(function(res){
-            if(res){
-                return res;
-            }
-            requestBackend(event);
+  event.respondWith(
+    caches.open(CACHE_VERSION).then(function(cache) {
+      return cache.match(event.request).then(function(response) {
+        var fetchPromise = fetch(event.request).then(function(networkResponse) {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
         })
-    )
+        return response || fetchPromise;
+      })
+    })
+  );
 });
 
 function requestBackend(event){
