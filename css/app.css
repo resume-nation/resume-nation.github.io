@@ -246,6 +246,19 @@ footer a{
   font-size: 20px;
 }
 
+.demo-resume-image{
+  width: 100%;
+}
+
+.demoImageBlock{
+  background-color: #efefef;
+  padding: 25px;
+}
+
+.demoImageBlockColumn{
+  padding: 10px;
+}
+
 @media (max-width: 7.6in) {
   #resume_1, #resume_2 {
     -webkit-transform: scale(0.7);
