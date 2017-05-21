@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-var CACHE_VERSION = 'resumenation-v10';
+var CACHE_VERSION = 'resumenation-v11';
 var CACHE_FILES = [
     '/',
     'index.html',
