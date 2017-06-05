@@ -186,6 +186,11 @@ footer a{
 }
 
 @font-face {
+    font-family: 'earthorbiter'; /*a name to be used later*/
+    src: url('/fonts/earthorbiter.ttf'); /*URL to font*/
+}
+
+@font-face {
     font-family: 'MysteryQuest'; /*a name to be used later*/
     src: url('/fonts/MysteryQuest-Regular.ttf'); /*URL to font*/
 }
@@ -233,8 +238,9 @@ footer a{
 }
 
 .nameHeader{
-  font-family: 'MysteryQuest';
-  font-size: 36px;
+  font-family: 'earthorbiter';
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .paddingRight{
