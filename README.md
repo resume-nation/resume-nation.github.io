@@ -5,7 +5,7 @@ This is a little resume builder app built on top of [Material AngularJS](https:/
 
 ## How To Use
 
-You can run this app locally on [any server](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) of your choice and it will up and running out-of-the-box after dropping the app folder into server.
+You can run this app locally on [any server](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) of your choice and it will be up and running out-of-the-box after dropping the app folder into server.
 
 ## License
 
