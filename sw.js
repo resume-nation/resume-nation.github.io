@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-var CACHE_VERSION = 'resumenation-v14';
+var CACHE_VERSION = 'resumenation-v15';
 var CACHE_FILES = [
     '/',
     'index.html',
@@ -75,14 +75,17 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request).then(function(res){
-            if(res){
-                return res;
-            }
-            requestBackend(event);
-        })
-    )
+    let online = navigator.onLine;
+    if(!online){
+        event.respondWith(
+            caches.match(event.request).then(function(res){
+                if(res){
+                    return res;
+                }
+                requestBackend(event);
+            })
+        )
+    }
 });
 
 function requestBackend(event){
