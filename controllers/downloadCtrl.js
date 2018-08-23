@@ -87,9 +87,11 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
     };
 
   $scope.linespacing = 35;
+  let linespacing = $scope.linespacing/35;
+  $('.cv1').css('line-height', linespacing+'em');
   $scope.changeLinespacing = function() {
     //console.log($scope.linespacing);
-    let linespacing = $scope.linespacing/20;
+    let linespacing = $scope.linespacing/35;
     $('.cv1').css('line-height', linespacing+'em');
   }
 });
