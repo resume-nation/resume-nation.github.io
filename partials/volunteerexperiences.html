@@ -1,0 +1,54 @@
+<div ng-controller="volunteerexperienceCtrl as volunteerexperienceList" class="tabsdemoStaticTabs">
+  <div class="detailSeparator">
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Organisation Name (ex. Resume-Nation)</label>
+          <md-icon><i class="material-icons">&#xE8F8;</i></md-icon>
+          <input ng-model="volunteerexperienceList.orgname" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Time Period (ex. July 2011 - Feb 2013)</label>
+          <md-icon><i class="material-icons">&#xE916;</i></md-icon>
+          <input ng-model="volunteerexperienceList.time_period" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Role (ex. Code Contributor)</label>
+          <md-icon><i class="material-icons">&#xE7FD;</i></md-icon>
+          <input ng-model="volunteerexperienceList.role_org" required>
+        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+          <label>Summary of your contributions.</label>
+          <md-icon><i class="material-icons">&#xE896;</i></md-icon>
+          <textarea ng-model="volunteerexperienceList.desc" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+    <input type="hidden" ng-model="volunteerexperienceList.id">
+    <md-button class="md-raised md-primary" ng-click="volunteerexperienceList.addExperience()" md-colors="{background: 'green'}" ng-bind="volunteerexperienceList.btnSaveExperience">Add</md-button>
+    <md-button class="md-raised md-primary" href="#/projects" md-colors="{background: 'deep-purple'}">Next ➔</md-button>
+  </div>
+  <md-toolbar class="md-theme-light" md-colors="{background: 'deep-purple'}">
+    <h2 class="md-toolbar-tools">
+      <span>Your Volunteer Work Experience</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="volunteerexperience in volunteerexperienceList.experiences">
+        <div class="md-list-item-text">
+          <h3>{{volunteerexperience.orgname}}</h3>
+          <h4>{{volunteerexperience.time_period}}</h4>
+          <p>{{volunteerexperience.role_company}}</p>
+          <p>Job Summary : {{volunteerexperience.desc}}</p>
+          <input type="hidden" value="{{volunteerexperience.id}}">
+        </div>
+        <md-button class="md-secondary" ng-click="volunteerexperienceList.bindSelectedData(vexperience)" md-colors="{background: 'deep-purple'}">Edit</md-button>
+        <md-button class="md-secondary" ng-click="volunteerexperienceList.removeExperience(vexperience)" md-colors="{background: 'red'}">Remove</md-button>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+      <md-list-item class="md-3-line" ng-show="!volunteerexperienceList.experiences.length">
+        <div class="md-list-item-text">
+          <p>Start adding Volunteer experience!</p>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

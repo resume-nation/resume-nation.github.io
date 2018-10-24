@@ -16,15 +16,18 @@ resumeApp.controller('tabCtrl', function($scope, toastService, utilService, $loc
                 $location.url("/experiences");
                 break;
             case 4:
-                $location.url("/projects");
+                $location.url("/volunteerexperiences");
                 break;
             case 5:
-                $location.url("/education");
+                $location.url("/projects");
                 break;
             case 6:
-                $location.url("/skills");
+                $location.url("/education");
                 break;
             case 7:
+                $location.url("/skills");
+                break;
+            case 8:
                 $location.url("/download");
                 break;
         }
@@ -50,6 +53,8 @@ resumeApp.controller('tabCtrl', function($scope, toastService, utilService, $loc
         $scope.selectedIndex = 6;
       }else if(currentState=='view8'){
         $scope.selectedIndex = 7;
+      }else if(currentState=='view9'){
+        $scope.selectedIndex = 8;
       }
     });
 

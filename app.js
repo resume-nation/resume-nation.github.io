@@ -21,18 +21,22 @@ resumeApp.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "partials/experiences.html"
     })
     .state('view5', {
+        url: "/volunteerexperiences",
+        templateUrl: "partials/volunteerexperiences.html"
+    })
+    .state('view6', {
         url: "/projects",
         templateUrl: "partials/projects.html"
     })
-    .state('view6', {
+    .state('view7', {
         url: "/education",
         templateUrl: "partials/education.html"
     })
-    .state('view7', {
+    .state('view8', {
         url: "/skills",
         templateUrl: "partials/skills.html"
     })
-    .state('view8', {
+    .state('view9', {
         url: "/download",
         templateUrl: "partials/download.html"
     })
