@@ -73,6 +73,21 @@
           <div class="clear"></div>
         </section>
 
+        <section ng-show="downloadList.velem.length">
+          <div class="sectionTitle">
+            <h1>Volunteer Experience</h1>
+          </div>
+
+          <div class="sectionContent">
+            <article ng-repeat="vexp in downloadList.velem">
+              <h2>{{vexp.role_org}} at {{vexp.orgname}}</h2>
+              <p class="subDetails">{{vexp.time_period}}</p>
+              <p>{{vexp.desc}}</p>
+            </article>
+          </div>
+          <div class="clear"></div>
+        </section>
+
         <section ng-show="downloadList.projects.length">
           <div class="sectionTitle">
             <h1>Projects</h1>
@@ -170,6 +185,21 @@
           <div class="clear"></div>
         </section>
 
+        <section ng-show="downloadList.velem.length">
+          <div class="sectionTitle_r2 pdf-header">
+            <h1>Volunteer Experience</h1>
+          </div>
+
+          <div class="sectionContent">
+            <article ng-repeat="vexp in downloadList.velem">
+              <h2>{{vexp.role_org}} at {{vexp.orgname}}</h2>
+              <p class="subDetails">{{vexp.time_period}}</p>
+              <p>{{vexp.desc}}</p>
+            </article>
+          </div>
+          <div class="clear"></div>
+        </section>
+
         <section ng-show="downloadList.projects.length">
           <div class="sectionTitle_r2 pdf-header">
             <h1>Projects</h1>
@@ -262,6 +292,21 @@
               <h2>{{exp.role_company}} at {{exp.companyname}}</h2>
               <p class="subDetails">{{exp.time_period}}</p>
               <p>{{exp.desc}}</p>
+            </article>
+          </div>
+          <div class="clear"></div>
+        </section>
+
+        <section ng-show="downloadList.velem.length">
+          <div class="sectionTitle_r3">
+            <h1>Volunteer Experience</h1>
+          </div>
+
+          <div class="sectionContent">
+            <article ng-repeat="vexp in downloadList.velem">
+              <h2>{{vexp.role_org}} at {{vexp.orgname}}</h2>
+              <p class="subDetails">{{vexp.time_period}}</p>
+              <p>{{vexp.desc}}</p>
             </article>
           </div>
           <div class="clear"></div>

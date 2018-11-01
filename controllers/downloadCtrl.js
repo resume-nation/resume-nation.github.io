@@ -44,6 +44,16 @@ resumeApp.controller('downloadCtrl', function($scope, $location, $log, $mdToast)
     i++;
   }
 
+  if(localStorage.getItem('addVolunteerExperienceObject')!==null){
+    var retrievedObject = localStorage.getItem('addVolunteerExperienceObject');
+    downloadList.velem = JSON.parse(retrievedObject);
+
+    if(JSON.parse(retrievedObject).length==0)
+      i++;
+  }else{
+    i++;
+  }
+
   if(localStorage.getItem('addProjectObject')!==null){
     var retrievedObject = localStorage.getItem('addProjectObject');
     downloadList.projects = JSON.parse(retrievedObject);
